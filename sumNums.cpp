@@ -1,4 +1,4 @@
-#include<iostream>
+s; #include<iostream>
 using namespace std;
 //剑指 Offer 64. 求1+2+…+n
 //利用静态变量和构造函数，创建n个变量，调用n次构造函数。
@@ -36,6 +36,14 @@ public:
 };
 
 
-int main(){
-	return 0;
-}
+递归：
+class Solution {
+public:
+	int sumNums(int n) {
+		if (n == 1){
+			return 1;
+		}
+		n += sumNums(n - 1);
+		return n;
+	}
+};
